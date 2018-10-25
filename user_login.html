@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <title>hi运动登录页</title>
+    <link rel="stylesheet" href="./CSS/user_login-style.css"/>
+    <link rel="stylesheet" href="./CSS/animate.css"/>
+</head>
+<body>
+    <!--hi运动登录页-->
+    <div class="container">
+        <div class="container_navbar">
+            <ul>
+                <li class="lf"><img src="img/logo3.png"></li>
+                <li class="lf"><p><span>&nbsp&nbsp|&nbsp&nbsp</span>登录</p></li>
+            </ul>
+            <div class="clear">
+                <form action="#">
+                    <div class="login">
+                        <ul>
+                            <li class="phone"><h6>用户名<span id="unameMsg" style="color:red;padding-left:108px;"></span></h6></li>
+                            <li><input type="text" name="uname" id="uname" placeholder="请输入您的用户名称/手机号" maxlength="12" onfocus="unameMsg()" onblur="unameBlur()"></li>
+                            <li class="upwd"><h6>密码<span id="upwdMsg" style="color:red;padding-left:122px;"></span></h6></li>
+                            <li><input type="password" name="upwd" id="upwd" placeholder="请输入您的用户密码" maxlength="16"  onfocus="upwdMsg()" onblur="upwdBlur()"></li>
+                            <a href="#">登录</a>
+                        </ul>
+                        <ul>
+                            <li><a href="#" class="second">忘记密码</a></li>
+                            <li><span> &nbsp| &nbsp</span></li>
+                            <li><a href="#">新用户注册</a></li>
+                        </ul>
+                        <ul class="line">
+                            <li></li>
+                            <li><h6>使用第三方账号登录</h6></li>
+                            <li></li>
+                        </ul>
+                    </div>
+                    <p>
+                        <ul class="icon">
+                            <li class="lf"><a href="#"><img src="img/login-qq.png"></a></li>
+                            <li class="lf"><a href="#"><img src="img/login-wx.png"></a></li>
+                            <li class="lf"><a href="#"><img src="img/login-wb.png"></a></li>
+                        </ul>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/common.js"></script>
+    <script src="js/user_login.js"></script>
+</body>
+</html>
