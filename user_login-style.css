@@ -1,0 +1,129 @@
+/*样式重写*/
+*{box-sizing:border-box;}
+body{
+    font:14px 'microsoft yahei', Arial,Helvetica,sans-serif;
+    color:#666666;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,button,li,p{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+a{color:#167AC6;text-decoration:none;}
+a:hover{color:#ff0700;text-decoration:underline;}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+/*登陆页的主界面样式*/
+.container{
+    width:680px;
+    height:585px;
+    margin:50px auto;
+}
+.container .container_navbar{
+    width:680px;
+    height:70px;
+    color:#fff;
+    background:#37373E;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    box-shadow:-1px 2px 10px 2px #ccc;
+    font-size:25px;
+    margin-top:100px;
+}
+.container .container_navbar ul:first-child img{margin:20px 0 0 256px;}
+.container .container_navbar p{margin-top:20px;}
+.container .container_navbar span{color:#999999;}
+.container .container_navbar div{
+    width:680px;
+    height:515px;
+    background:#FFFFFF;
+    box-shadow:-1px 2px 10px 2px #ccc;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;}
+/*登录表单样式*/
+.login{padding-top:5px;}
+.login ul{margin:20px 200px;}
+h6{color:#333333;margin:20px 25px;}
+.login .phone,.login .upwd{width:338px;}
+.login h6,.login ul li,.login {font-size:14px;}
+.login input{
+    width:338px;
+    height:50px;
+    color:#6a6f77;
+    background-color:lightgrey;
+    border-radius:5px;
+    font-size:18px;
+    padding-left:20px;
+    border:1px solid gray;
+    display:block;
+    text-decoration:none;
+    outline:0;
+}
+input:focus{
+    border-top:3px solid gray;
+    border-left:3px solid gray;
+}
+.login ul:first-child a{
+    text-decoration:none;
+    width:150px;
+    height:60px;
+    color:white;
+    background:#F23E38;
+    font-size:18px;
+    text-align:center;
+    line-height:60px;
+    border:none;
+    border-radius:3px;
+    margin:50px 0 0 98px;
+    display:block;
+}
+.login ul:first-child a:hover{font-size:30px;}
+.login ul:nth-child(2) li{float:left;}
+.login ul:nth-child(2):after,.line:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.login ul .second{margin-left:102px;}
+.login .phone{background:url(img/global.png) no-repeat -64px -3520px;}
+.login .pwd{background:url(img/global.png) no-repeat -64px -3585px;}
+
+.line li{float:left;}
+.line li:first-child,.line li:nth-child(3){
+    width:90px;
+    border:1px solid red;
+}
+.line{width:400px;}
+.line li:first-child{margin:10px 10px;}
+.line li:nth-child(2){margin:-20px -26px;}
+.line li:nth-child(3){margin:10px 10px;}
+
+.icon img{width:62px;}
+.icon li{width:62px;}
+.icon li:first-child{margin:-110px 200px;}
+.icon li:nth-child(2){margin:-110px 345px;}
+.icon li:nth-child(3){margin:-110px 480px;}
+.icon img:hover{transform:scale(1.3);transition:all .5s linear;}
+/*页面导航栏logo的动画样式*/
+@keyframes change{
+    0%{
+        transform:scale(0);
+    }
+    25%{
+        transform:scale(1.3);
+    }
+    50%{
+        transform:scale(0.5);
+    }
+    75%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(1.3);
+    }
+}
+.container .container_navbar ul:first-child img{
+    animation:colok 3600s linear infinite;
+    animation:change 5s linear infinite;
+}

@@ -1,0 +1,110 @@
+/*样式重写*/
+*{box-sizing:border-box;}
+body{
+    font:14px 'microsoft yahei', Arial,Helvetica,sans-serif;
+    color:#CCD7CC;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,button,li,p{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+body a{color:#666666;text-decoration:none;}
+body a:hover{color:#F83636;text-decoration:none;}
+/*头部导航栏样式*/
+#header-navbar{width:100%;background:#202023;position:fixed;top:0;margin-bottom:20px;}
+#headerNavbar{width:1435px;height:40px;}
+#headerNavbar img{margin:0 60px 0 75px;}
+#headerNavbar .nav-dl{background:url(../img/nav-dl.png) no-repeat 1px -1px;padding-left:23px;}
+#headerNavbar ul:first-child li{float:left;margin:0 28px;padding-top:12px;}
+#headerNavbar ul:nth-child(2) li{float:left;margin-top:15px;}
+#headerNavbar ul:nth-child(2) li:first-child{margin-left:55px;}
+#headerNavbar a{color:#D7D7D7;display:block}
+#headerNavbar a:hover{color:#C62C2C;}
+#headerNavbar ul li:first-child ~ li a:hover,ul:nth-child(2) a:hover{transform:scale(1.2);transition:all .5s linear;}
+
+
+/*主体左部样式*/
+#section_left,section #left_box{margin-top:50px;}
+section #left_box{width:0;height:100%;background:#2D2C2E;}
+section #left_box  ul li{width:45px;height:87px;font-size:16px;border:1px solid #343335;padding-top:25px;}
+section #left_box  ul li a{color:#FFFFFF;}
+section #left_box  ul li:first-child{background:#252426 url(../img/日历.png) -14px 18px no-repeat;cursor:pointer;}
+section #left_box  ul li:nth-child(2){background:#252426 url(../img/女士.png) -14px 10px no-repeat;cursor:pointer;}
+section #left_box  ul li:nth-child(3){background:#252426 url(../img/器械.png) -14px -15px no-repeat;}
+section #left_box  ul li:nth-child(4){background:#252426 url(../img/肌肉.png) -14px -15px no-repeat;}
+section #left_box  ul li:nth-child(5){background:#252426 url(../img/树.png) -14px -5px no-repeat;}
+#section_left{width:276px;height:760px;overflow-y:auto;position:fixed;top:0;left:0;}
+section #left_box{position:fixed;top:0;left:0;}
+
+#leftChildren{width:276px;height:1000px;background:#2D2C2E;}
+/*主体左部搜索框样式*/
+#leftChildren input{
+    width:240px;height:30px;
+    color:#757575;background:#202023 url(../img/global.png) no-repeat 147px -543px;
+    border:1px solid #202023;border-radius:3px;
+    padding-left:10px;outline:0;margin:15px  15px;}
+/* 主体部分内容样式 */
+#leftChildren ul.tree li span{width:276px;height:38px;color:#fff;background:#202023;font-size:18px;line-height:38px;padding-left:50px;cursor:pointer;display:block;}
+
+#leftChildren ul.tree li:first-child span{background:url(../img/global.png) no-repeat -43px -1854px;}
+#leftChildren ul.tree li:nth-child(2) span.clear{background:#C83838 url(../img/global.png) no-repeat -43px -1882px;}
+#leftChildren li.clear{margin-left:10px;width:266px;}
+#leftChildren a{width:57px;height:24px;color:#B2B2B2;background:#3F3F3F;border-radius:2px;text-align:center;font-size:13px;line-height:24px;display:block;float:left;margin:5px 0 5px 5px;}
+#leftChildren a:hover{background:#C83838;color:#fff;}
+#leftChildren li.clear:nth-child(2)~li{border-top:1px solid #343335;}
+#leftChildren li.clear:nth-child(3) a:last-child,#leftChildren li.clear:nth-child(4) a:last-child{margin-bottom:20px;}
+#leftChildren .tree .action_class li:first-child h3{background:url(../img/global.png)no-repeat -56px -1944px;}
+#leftChildren .tree .action_class li:nth-child(2) h3{background:url(../img/global.png)no-repeat -56px -1836px;}
+#leftChildren .tree .action_class li:nth-child(3) h3{background:url(../img/global.png)no-repeat -56px -1795px;}
+#leftChildren .tree .action_class li:nth-child(4) h3{background:url(../img/global.png)no-repeat -56px -1815px;}
+#leftChildren .tree .action_class li:nth-child(5) h3{background:url(../img/global.png)no-repeat -56px -1836px;}
+#leftChildren .tree .action_express li:first-child h3{background:url(../img/global.png)no-repeat -56px -1795px;}
+#leftChildren .tree .action_express li:nth-child(4) h3{background:url(../img/global.png)no-repeat -56px -1815px;}
+#leftChildren .tree .action_express li:nth-child(5) h3{background:url(../img/global.png)no-repeat -56px -1836px;}
+#leftChildren li.clear h3{margin:25px 0;padding-left:35px;}
+#leftChildren li.clear h4{margin-left:5px;}
+/* 左部内容绑定事件样式 */
+/*上下开关按钮样式*/
+.iconOpen{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:5px solid #f2f2f2;margin:-22px 0 50px 135px;}
+.iconClose{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #f2f2f2;margin:-22px 0 50px 135px;}
+.tree>li>ul{overflow:hidden;height:0;transition:all .5s linear;}
+.open.clear+ul{height:790px;}
+
+/*主体右部样式*/
+#section_right{width:100%;height:100%;overflow-y:auto;}
+#rightChild{width:100%;height:100%;background:#f2f2f2;}
+#section_left #icon{width:13px;height:143px;background:#1F1D20;border-radius:0 80px 80px 0; position:fixed;top:315px;left:276px;cursor:pointer;}
+#section_left #icon:hover{background:#565656;}
+#section_left #icon .iconLeft{width:0;height:0;border-bottom:10px solid transparent;border-top:10px solid transparent;border-right:10px solid #c1c1c1;margin:60px 0 0 1px;}
+#section_left #icon .iconRight{width:0;height:0;border-bottom:10px solid transparent;border-top:10px solid transparent;border-left:10px solid #c1c1c1;;margin:60px 0 0 1px;}
+
+/*滚动条整体样式*/
+#section_left::-webkit-scrollbar{width:8px;}
+/*滚动条里面轨道*/
+#section_left::-webkit-scrollbar-track{background:#2D2C2E;
+    -webkit-box-shadow:inset 0 0 0 rgba(255,255,255,1);}
+/*滚动条里面小方块*/
+#section_left::-webkit-scrollbar-thumb{border-radius:5px;-webkit-box-shadow:inset 0 0 5px rgba(0,0,0,0.5);background:#565656;}
+#section_right::-webkit-scrollbar-thumb{border-radius:5px;-webkit-box-shadow:inset 0 0 5px rgba(0,0,0,0.5);background:#565656;}
+@keyframes flop{
+    0%{
+        transform:scale(1.5);
+    }
+    25%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.5);
+    }
+    75%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(1.5);
+    }
+}
+#headerNavbar img{animation:flop 2s linear infinite;}

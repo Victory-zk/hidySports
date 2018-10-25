@@ -1,0 +1,304 @@
+/*样式重写*/
+*{box-sizing:border-box;}
+body{
+    font:14px 'microsoft yahei', Arial,Helvetica,sans-serif;
+    color:#666666;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dd,button,li,p{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.lf{float:left;}
+.rt{float:right;}
+.clear{clear:both;}
+a{color:#D7D7D7;text-decoration:none;}
+a:hover{color:#ff0700;}
+/*注册页的顶部导航栏样式*/
+.top_navbar{
+    width:1583px;
+    height:60px;
+    background:#202023;
+    position:fixed;
+    z-index:500;
+}
+.top_navbar li{
+    float:left;
+    margin:14px -142px 0 200px;
+    line-height:30px;
+}
+.top_navbar .nav-dl a{background:url(../img/nav-dl.png) no-repeat;padding-left:20px;}
+.top_navbar li:hover{transform:scale(1.5);transition:all .5s linear;}
+header:after{
+    content:"";
+    display:table;
+}
+.container{
+    width:998px;
+    height:685px;
+    margin:150px auto;
+}
+.container .container_navbar{
+    width:998px;
+    height:104px;
+    color:#fff;
+    background:#37373E;
+    border:1px solid #ccc;
+    box-shadow:1px 1px 1px 1px #ccc;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    font-size:25px;
+}
+.container .container_navbar img{margin:10px 0 0 400px;}
+.container .container_navbar p{margin-top:15px;}
+.container .container_navbar span{color:#999999;}
+.container .clear{
+    width:998px;
+    height:645px;
+    background:#FFFFFF;
+    border:1px solid #ccc;
+    box-shadow:-1px 2px 10px 2px #ccc;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;}
+.container .container_navbar ul{margin-top:20px;}
+/*注册表单样式*/
+.register{margin:50px 350px;}
+.register h4{width:338px;color:black;margin:20px 25px;}
+.register ul li:first-child{background: url(../img/global.png) no-repeat -72px -3519px}
+.register ul li:nth-child(3) {background: url(../img/global.png) no-repeat -72px -3585px}
+.register ul li:nth-child(5){background: url(../img/global.png) no-repeat -72px -3607px}
+.register input{
+    width:338px;
+    height:50px;
+    color:#6a6f77;
+    background-color:lightgrey;
+    border-radius:5px;
+    font-size:18px;
+    padding-left:20px;
+    border:1px solid gray;
+    display:block;
+    text-decoration:none;
+    outline:0;
+}
+input:focus{
+    border-top:3px solid gray;
+    border-left:3px solid gray;
+}
+.register .first{
+    width:150px;
+    height:60px;
+    color:white;
+    background:#F23E38;
+    font-size:18px;
+    text-align:center;
+    line-height:60px;
+    border:none;
+    border-radius:3px;
+    margin:45px 0 10px 98px;
+    display:block;
+}
+.register .second{
+    color:#167AC6;
+    text-decoration:underline;
+    margin-left:124px;
+}
+.register .second:hover{color:red;}
+.register .first:hover{font-size:30px;}
+.clear .icon1{
+    width:338px;
+    height:99px;
+    margin:20px 360px;
+}
+.clear .icon2 li{float:left;margin:20px 23px;}
+.clear .icon1 li img{width:62px;}
+.clear .icon1 li img:hover{transform:scale(1.3);transition:all .5s linear;}
+.clear h3{
+    width:338px;
+    margin:-30px 450px;}
+.line li:first-child,.line li:nth-child(3){
+    width:90px;
+    border:1px solid red;
+}
+.line li:first-child{margin:-18px 350px;}
+.line li:nth-child(3){margin:-18px 600px;}
+/*注册页底部样式*/
+#footer-top{width:1575px;height:207px;background-color:#333338;}
+.float-title{margin:0 155px;}
+.float-title li{
+    float:left;
+    color:#797D87;
+    margin-top:10px;
+}
+.float-title:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+.float-title li:first-child{margin-right:210px;}
+.float-title li:nth-child(2),.float-title li:nth-child(3),.float-title li:nth-child(4),.float-title li:nth-child(5){margin-right:135px}
+.float-section li{float:left;}
+.float-section p{margin-top:5px;}
+.float-section p a,.float-section p span{color:#797D87;}
+.float-section p a:hover{color:#C52C2C;}
+.float-section li:first-child{margin:15px 62px 0 155px;}
+.float-section li:first-child div{padding-right:5px;}
+.float-section li:nth-child(2){margin:15px 28px 0 0;}
+.float-section li:nth-child(3){margin:15px 25px 0 0px;}
+.float-section li:nth-child(4){margin:15px 38px 0 0;}
+.float-section li:nth-child(5){margin-top:15px;}
+.float-section div{border-right:1px solid #484950;}
+.float-section li:nth-child(5) div{border:none;}
+.float-section li:nth-child(2) div,.float-section li:nth-child(3) div,.float-section li:nth-child(4) div,.float-section li:nth-child(5) div{padding-right:30px;}
+.footer-end{
+    width:1575px;
+    height:100px;
+    background:#2B2B2E;
+}
+.footer-end ul li{float:left;margin:25px 15px 10px 0;}
+.footer-end ul li:first-child{margin-left:465px;}
+.footer-end ul li a{color:#666666;}
+.footer-end p{width:288px;font-size:12px;margin:0 auto;}
+.footer-end ul:after{
+    content:"";
+    display:block;
+    clear:both;
+}
+#footer-top .float-section a:hover,.footer-end ul a:hover{color:#fff;background:red;transform:scale(1.3);transition:all .5s linear;}
+/*页面导航栏logo的动画样式*/
+@keyframes change{
+    0%{transform:scale(0);}
+    25%{transform:scale(1.3);}
+    50%{transform:scale(0.5);}
+    75%{transform:scale(1);}
+    100%{transform:scale(1.3);}
+}
+.top_navbar ul li img,.container_navbar ul li img{animation:change 5s linear infinite;}
+/*头部登录弹出框样式*/
+#popContainer{
+    width:680px;height:585px;
+    position:fixed;z-index:100;}
+#popContainer .popContainer_navbar{
+    width:680px;
+    height:70px;
+    color:#fff;
+    background:#37373E;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    box-shadow:-1px 2px 10px 2px #ccc;
+    font-size:25px;
+    margin:7% 26%;}
+#popContainer-bg{
+    width:100%;height:5000px;
+    background-image:linear-gradient(to bottom,rgba(65,64,59,0.8),rgba(21,17,14,0.8));
+    position:fixed;
+    display:none;}
+#popContainer-bg:target{display:block;}
+/*关闭按钮样式*/
+.popContainer_navbar .close a{
+    width:30px;height:30px;
+    color:#fff;
+    background:black;
+    border-radius:50%;
+    text-align:center;
+    position:absolute;
+    margin:-20px 0 0 688px;}
+.popContainer_navbar .close a:hover{color:#F73845;transform:scale(1.2);transition:all .5s linear;}
+#popContainer:target{display:none;}
+/*登录页的主界面样式*/
+#popContainer .popContainer_navbar .logo3{margin:10px 10px 0 280px;}
+#popContainer .popContainer_navbar p{margin-top:10px;}
+#popContainer .popContainer_navbar span{color:#999999;}
+#popContainer .popContainer_navbar div{
+    width:680px;
+    height:515px;
+    background:#FFFFFF;
+    box-shadow:-1px 2px 10px 2px #ccc;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;}
+/*登录表单样式*/
+.login{padding-top:5px;}
+.login ul{margin:20px 200px;}
+h6{color:#333333;}
+.uname h6,.upwd h6,.line h6{margin:20px 25px;}
+.login ul:first-child li:nth-child(5){margin-top:15px;}
+.login ul:first-child li:nth-child(5) input{margin-left:8px;}
+.login ul:first-child li:nth-child(5) h6{margin:-21px 25px;}
+.login .uname,.login .upwd{width:338px;}
+.login h6,.login ul li,.login{font-size:14px;}
+.login #uname,.login #upwd{
+    width:338px;
+    height:50px;
+    color:#6a6f77;
+    background-color:lightgrey;
+    border-radius:5px;
+    font-size:18px;
+    padding-left:20px;
+    border:1px solid gray;
+    display:block;
+    text-decoration:none;
+    outline:0;}
+input:focus{
+    border-top:3px solid gray;
+    border-left:3px solid gray;
+}
+.login ul:first-child li:last-child input{
+    text-decoration:none;
+    width:150px;
+    height:60px;
+    color:#FFFFFF;
+    background:#CECECE;
+    font-size:18px;
+    text-align:center;
+    line-height:60px;
+    border:none;
+    border-radius:3px;
+    margin:50px 0 0 98px;
+    display:block;
+}
+.login ul:first-child li:last-child input:hover{font-size:30px;}
+.login ul:nth-child(2) li{float:left;}
+.login ul:nth-child(2):after,.line:after{
+    content:'';
+    display:block;
+    clear:both;
+}
+.login .secondUl li:first-child a{margin-left:102px;}
+.login .secondUl li a{color:#167AC6;}
+.login .secondUl li a:hover{color:#C62C2C;text-decoration:underline;}
+.login .uname{background:url(../img/global.png) no-repeat -64px -3607px;}
+.login .upwd{background:url(../img/global.png) no-repeat -64px -3585px;}
+
+.line1 li{float:left;}
+.line1 li:first-child,.line1 li:nth-child(3){
+    width:90px;
+    border:1px solid red;
+}
+.line1{width:400px;}
+.line1 li:first-child,.line1 li:nth-child(3){background:red;margin:2px 10px;}
+.line1 li:nth-child(2){margin:-9px 0;}
+.popicon img{width:62px;}
+.popicon li{width:62px;}
+.popicon li:first-child{margin:-95px 212px;}
+.popicon li:nth-child(2){margin:-95px 340px;}
+.popicon li:nth-child(3){margin:-95px 470px;}
+.popicon img:hover{transform:scale(1.3);transition:all .5s linear;}
+/*页面导航栏logo的动画样式*/
+@keyframes Change{
+    0%{
+        transform:scale(0);
+    }
+    25%{
+        transform:scale(1.3);
+    }
+    50%{
+        transform:scale(0.5);
+    }
+    75%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(1.3);
+    }
+}
+#container .container_navbar .logo3{animation:Change 5s linear infinite;}
+.popContainer_navbar ul .logo3{animation:Change 5s linear infinite;}
