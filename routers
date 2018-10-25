@@ -1,0 +1,85 @@
+//引入express框架；
+const express=require('express');
+//创建路由器
+var router=express.Router();
+//引入数据库连接池pool；
+var pool=require('../pool');
+
+//创建register路由接口，根据用户名称查询数据库中是否已存在用户;
+router.get('/selectUname',(req,res)=>{
+	var $uname=req.query.Uname;
+	if(!$uname) {
+		res.send('2');//用户名称不能为空
+		return;
+	}else{
+		//创建sql语句连接数据库；
+		var sql='SELECT * FROM hisports_user WHERE Uname=?';
+		pool.query(sql,[$uname],(err,result)=>{
+			if(result.length>0) {
+				res.send('1');//用户名称已存在！
+			}else{
+				res.send('0');//用户名称可以使用！
+			}
+		})
+	}
+})
+// 接收前端传递过来的数据在路由器下添加用户注册路由，完成注册功能；
+router.post('/register',(req,res)=> {
+	var obj=req.body;
+	console.log(req.body);
+    //验证表单提交的内容是否为空；
+	//验证手机号是否为空；
+    var $phone=obj.phone1;
+	var $uname=obj.Uname;
+	var $upwd=obj.upwd1;
+     if(!$phone) {
+         res.send('用户手机号码不能为空！');
+         return;
+	 }
+    // // 验证用户名为空；   
+     if(!$uname) {
+         res.send('用户名称不能为空！');
+         return;
+     }
+    // 验证用户密码为空；
+     if(!$upwd) {
+	    res.send('用户密码不能为空！');
+        return;
+	}
+	// 以上验证通过，执行插入数据库操作
+    // 构建sql语句；
+	var sql='INSERT INTO hisports_user values(NULL,?,?,?,NULL,NULL,NULL)';
+	pool.query(sql,[$uname,$upwd,$phone],(err,result)=>{
+	 	if(err) throw err;
+		if(result.affectedRows>0)
+	res.send('1');
+	})
+})
+
+//在路由器下添加用户登录路由接口,用post方法：查询用户表所有数据，实现登录功能；
+router.post('/login',(req,res)=>{
+    var obj=req.body;
+	var $uname=obj.uname;
+	var $upwd=obj.upwd;
+	//判断用户名是否为空；
+	if(!$uname) {
+		res.send("<script>alert('用户名称不能为空！');window.history.back(-1);</script>");
+	}
+	//判断用户密码是否为空；
+	if(!$upwd) {
+		res.send("<script>alert('用户密码不能为空！');window.history.back(-1);</script>");
+		
+	}
+	//构建数据库中sql查询语句
+	var sql='SELECT * FROM hisports_user WHERE uname=? AND upwd=?';
+	pool.query(sql,[$uname,$upwd],(err,result)=>{
+		if(err) throw err;
+		if(result.length>0) {
+			res.send('<script>alert("登陆成功！");location.href="http://127.0.0.1:3000/index.html";</script>')
+		}else{
+			res.send('<script>alert("用户名或密码输入有误！");window.history.back(-1);</script>')
+		}
+	})
+});
+// 导出路由器；
+module.exports=router;
